@@ -27,22 +27,24 @@ export default function VistaTV() {
     );
 
   return (
-    <div
-      style={{
-        height: "90vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center",
-      }}
-    >
-      <h1 style={{ fontSize: "5rem", fontWeight: "bold" }}>
-        <h1 style={{ fontSize: "5rem", fontWeight: "bold" }}>
-          {cancion.contenido && cancion.contenido[idx]
-            ? cancion.contenido[idx].letra
-            : "Cargando estrofa..."}
-        </h1>
-      </h1>
-    </div>
+    <div style={{ 
+    height: '100vh', 
+    backgroundColor: 'black', 
+    display: 'flex', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    padding: '20px' 
+}}>
+  <h1 style={{ 
+      fontSize: '8vw', 
+      color: 'yellow', 
+      fontWeight: 'bold', 
+      textAlign: 'center', 
+      lineHeight: '1.2' 
+  }}>
+    {cancion.contenido && cancion.contenido[idx] ? cancion.contenido[idx].letra : "Esperando Alabanza..."}
+  </h1>
+</div>
   );
 }
+
