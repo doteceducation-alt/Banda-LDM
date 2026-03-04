@@ -25,17 +25,23 @@ export default function PanelControl() {
   if (!cancion) return <div style={{ padding: "20px" }}>Conectando...</div>;
 
   return (
-    <div style={{ padding: "20px", textAlign: "center" }}>
-      <h2>{cancion.titulo}</h2>
-      <button onClick={() => cambiar(idx - 1)} disabled={idx === 0}>
-        Anterior
-      </button>
-      <button
-        onClick={() => cambiar(idx + 1)}
-        disabled={idx === cancion.contenido.length - 1}
-      >
-        Siguiente
-      </button>
-    </div>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', padding: '30px' }}>
+  <button 
+    onClick={() => cambiar(idx + 1)} 
+    style={{ height: '200px', fontSize: '4rem', backgroundColor: '#28a745', color: 'white', borderRadius: '30px', border: 'none' }}
+    disabled={idx === cancion.contenido.length - 1}
+  >
+    SIGUIENTE
+  </button>
+
+  <button 
+    onClick={() => cambiar(idx - 1)} 
+    style={{ height: '120px', fontSize: '2rem', backgroundColor: '#444', color: 'white', borderRadius: '30px', border: 'none' }}
+    disabled={idx === 0}
+  >
+    ANTERIOR
+  </button>
+</div>
   );
 }
+
